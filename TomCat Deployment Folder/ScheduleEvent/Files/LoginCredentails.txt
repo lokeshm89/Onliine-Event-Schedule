@@ -1,0 +1,11 @@
+1:xc:cv:xc:Admin:xc
+2:cv:cv:cv:Admin:cv
+3:att:att:attt:Presenter:att
+4:cv:cv:cv:Presenter:cv
+5:xc:xcxc:xc:Attendee:xc
+6:sd:sd:sd:Attendee:sd
+7:loki:loki:loki:Admin:loki
+8:kk:kk:kk:Presenter:kk
+9:lokip:lokip:lokip:Presenter:lokip
+10:lokia:lokia:lokia:Attendee:lokia
+11:ADMIN1:ADMIN1:ADMIN1@gmail.com:Admin:admin

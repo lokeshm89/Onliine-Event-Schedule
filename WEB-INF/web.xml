@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>ScheduleEvent</display-name>
+  <welcome-file-list>
+    <welcome-file>Main.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name><servlet-class>scheduler.event.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SignUpServlet</servlet-name>
+    <servlet-class>scheduler.event.servlet.SignUpServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SignUpServlet</servlet-name>
+    <url-pattern>/SignUpServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>LoginAttendeeServlet</servlet-name>
+    <servlet-class>scheduler.event.servlet.LoginAttendeeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginAttendeeServlet</servlet-name>
+    <url-pattern>/LoginAttendeeServlet</url-pattern>
+  </servlet-mapping>
+    <servlet>
+  <description /> 
+  <display-name>EventsDetails</display-name> 
+  <servlet-name>EventsDetails</servlet-name> 
+  <servlet-class>scheduler.event.servlet.EventsDetails</servlet-class> 
+  </servlet>
+ <servlet-mapping>
+  <servlet-name>EventsDetails</servlet-name> 
+  <url-pattern>/EventsDetails</url-pattern> 
+  </servlet-mapping>
+   
+   
+   <servlet>
+    <description></description>
+    <display-name>SearchEvent</display-name>
+    <servlet-name>SearchEvent</servlet-name>
+    <servlet-class>scheduler.event.servlet.SearchEvent</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchEvent</servlet-name>
+    <url-pattern>/searchEvent</url-pattern>
+  </servlet-mapping>
+
+      <servlet>
+    <description></description>
+    <display-name>VenueDetails</display-name>
+    <servlet-name>VenueDetails</servlet-name>
+    <servlet-class>scheduler.event.servlet.VenueDetails</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VenueDetails</servlet-name>
+    <url-pattern>/VenueDetails</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>Logout</display-name>
+    <servlet-name>Logout</servlet-name>
+    <servlet-class>scheduler.event.servlet.Logout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Logout</servlet-name>
+    <url-pattern>/Logout</url-pattern>
+  </servlet-mapping>
+    
+          <servlet>
+    <description></description>
+    <display-name>Attendees</display-name>
+    <servlet-name>Attendees</servlet-name>
+    <servlet-class>scheduler.event.servlet.Attendees</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Attendees</servlet-name>
+    <url-pattern>/Attendees</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Eventlogout</display-name>
+    <servlet-name>Eventlogout</servlet-name>
+    <servlet-class>scheduler.event.servlet.Eventlogout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Eventlogout</servlet-name>
+    <url-pattern>/Eventlogout</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>AdminLogin</display-name>
+    <servlet-name>AdminLogin</servlet-name>
+    <servlet-class>scheduler.event.servlet.AdminLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminLogin</servlet-name>
+    <url-pattern>/AdminLogin</url-pattern>
+  </servlet-mapping>
+    
+    
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+  
+</web-app>

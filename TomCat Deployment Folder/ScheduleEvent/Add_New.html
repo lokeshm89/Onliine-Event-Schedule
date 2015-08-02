@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>2 Column Frames Layout &mdash; Left Menu</title>
+		<style type="text/css">
+		
+		body{
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			height: 100%; 
+			max-height: 100%; 
+			font-family:Sans-serif;
+			line-height: 1.5em;
+			background: url(../images/blue_background.jpeg);
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			background-color: blue;
+		}
+		
+		#nav{
+			position: absolute;
+			top: 0;
+			bottom: 0; 
+			left: 0;
+			width: 230px; /* Width of navigation frame */
+			height: 100%;
+			overflow: hidden; /* Disables scrollbars on the navigation frame. To enable scrollbars, change "hidden" to "scroll" */
+			background: #eee;
+		}
+		
+		main{
+			position: fixed;
+			top: 0; 
+			left: 230px; /* Set this to the width of the navigation frame */
+			right: 0;
+			bottom: 0;
+			overflow: auto; 
+			background-color: rgb(51,153,255);
+		}
+		
+		.innertube{
+			margin: 15px; /* Provides padding for the content */
+		}
+		
+		p {
+			color: #555;
+		}
+
+		nav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		nav ul a {
+			color: darkgreen;
+			text-decoration: none;
+		}
+				
+		/*IE6 fix*/
+		* html body{
+			padding: 0 0 0 230px; /* Set the last value to the width of the navigation frame */
+		}
+		
+		* html main{ 
+			height: 100%; 
+			width: 100%; 
+		}
+		
+		</style>
+
+<Style>
+div.formrow {background:#FFF8DC;border:2px solid #ffc;margin:0 0 5px 0;float:left;width:100%;padding:6px 0;}
+div.formrow label {float:left;display:block;width:15em;font-weight:bold;padding:0 6px;}
+div.formrow label:hover {background:#FFFF66;cursor:pointer;}
+div.formrow fieldset {border:1px solid gray;margin:0 6px;}
+div.formrow fieldset span {display:block;}
+div.formrow fieldset span label {float:none;display:inline;}
+div.formrow fieldset legend {font-weight:bold;}
+div.requiredRow {border:2px solid #049;}
+
+.button.blue {
+  color: #236277;
+  text-shadow: 0 1px #c2ecf9;
+  background: #61cdf3;
+  border-color: #6fbad1 #3fa3c0 #3583ab;
+  background-image: -webkit-linear-gradient(top, #9be5fa, #61cdf3 70%, #5fbde8);
+  background-image: -moz-linear-gradient(top, #9be5fa, #61cdf3 70%, #5fbde8);
+  background-image: -o-linear-gradient(top, #9be5fa, #61cdf3 70%, #5fbde8);
+  background-image: linear-gradient(to bottom, #9be5fa, #61cdf3 70%, #5fbde8);
+  -webkit-box-shadow: inset 0 1px #c5f0fd, inset 0 0 0 1px #8ad1eb, 0 1px #3583ab, 0 3px #3f9db8, 0 4px #3583ab, 0 5px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 1px #c5f0fd, inset 0 0 0 1px #8ad1eb, 0 1px #3583ab, 0 3px #3f9db8, 0 4px #3583ab, 0 5px 2px rgba(0, 0, 0, 0.4);
+}
+</Style>		
+   		
+	
+	</head>
+	
+	<body background="/images/blue_background.jpeg" >		
+				
+		<main>
+			<div class="innertube">				
+				<h1 style="font-family: sans-serif; line-height: 24px; text-align: center; ">Add New Venue Page</h1>
+				<h2 ccid="2465">Enter the Venue details below</h2>
+<form action="Addnew" method="post" name="Add_New">
+<div class="formrow">
+	<label for="txt_VenueName" id="VenueName-ariaLabel">Venue Name</label>
+	<input id="txt_VenueName" name="txt_VenueName" type="text" aria-labelledby="VenueName-ariaLabel">
+</div>
+<div class="formrow">
+	<label for="txt_VenueDescription" id="VenueDescription-ariaLabel">Venue Description</label>
+	<input id="txt_VenueDescription" name="txt_VenueDescription" type="text" aria-labelledby="VenueDescription-ariaLabel">
+</div>
+<div class="formrow">
+	<label for="sel_VenueType" id="VenueType-ariaLabel">Venue Type</label>
+	<select id="sel_VenueType" name="sel_VenueType" aria-labelledby="VenueType-ariaLabel">
+		<option value="CF - Conference Room">CF - Conference Room</option>
+		<option value="LH - Lecturer Hall">LH - Lecturer Hall</option>
+		<option value="TH - Training Hall">TH - Training Hall</option>
+		<option value=""></option>
+	</select>
+</div>
+<div class="formrow">
+	<label for="sel_VenueState" id="VenueState-ariaLabel">Venue State</label>
+	<select id="sel_VenueState" name="sel_VenueState" aria-labelledby="VenueState-ariaLabel">
+		<option value="IL">IL</option>
+		<option value="IN">IN</option>
+		<option value="KY">KY</option>
+		<option value="KA">KA</option>
+		<option value="CA">CA</option>
+		<option value="NY">NY</option>
+		<option value="FL">FL</option>
+		<option value="TX">TX</option>
+		<option value="AZ">AZ</option>
+	</select>
+</div>
+<div class="row">
+<input type="submit" value="Submit" >
+</div>
+
+		</main>
+		<nav id="nav">
+			<div class="innertube">
+			<h3>Actions</h3>
+			<ul>
+				<li><a href="html/Header.html">Add New Venue</a></li>
+				<li><a href="#">Update Venue Details</a></li>
+				<li><a href="html/Remove_Venue.html">Remove Venue</a></li>
+				<li><a href="#">Approve Event Request</a></li>				
+			</ul>			
+			</div>
+		</nav>
+	
+	</body>
+</html>

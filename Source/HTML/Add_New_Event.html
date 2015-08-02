@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>2 Column Frames Layout &mdash; Left Menu</title>
+		<style type="text/css">
+		
+		body{
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			height: 100%; 
+			max-height: 100%; 
+			font-family:Sans-serif;
+			line-height: 1.5em;
+			background: url(../images/blue_background.jpeg);
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			background-color: blue;
+		}
+		
+		#nav{
+			position: absolute;
+			top: 0;
+			bottom: 0; 
+			left: 0;
+			width: 230px; /* Width of navigation frame */
+			height: 100%;
+			overflow: hidden; /* Disables scrollbars on the navigation frame. To enable scrollbars, change "hidden" to "scroll" */
+			background: #eee;
+		}
+		
+		main{
+			position: fixed;
+			top: 0; 
+			left: 230px; /* Set this to the width of the navigation frame */
+			right: 0;
+			bottom: 0;
+			overflow: auto; 
+			background-color: rgb(51,153,255);
+		}
+		
+		.innertube{
+			margin: 15px; /* Provides padding for the content */
+		}
+		
+		p {
+			color: #555;
+		}
+
+		nav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		nav ul a {
+			color: darkgreen;
+			text-decoration: none;
+		}
+				
+		/*IE6 fix*/
+		* html body{
+			padding: 0 0 0 230px; /* Set the last value to the width of the navigation frame */
+		}
+		
+		* html main{ 
+			height: 100%; 
+			width: 100%; 
+		}
+		
+		</style>
+
+<Style>
+div.formrow {background:#ffc;border:2px solid #ffc;margin:0 0 5px 0;float:left;width:100%;padding:6px 0;}
+div.formrow label {float:left;display:block;width:15em;font-weight:bold;padding:0 6px;}
+div.formrow label:hover {background:#FFFF66;cursor:pointer;}
+div.formrow fieldset {border:1px solid gray;margin:0 6px;}
+div.formrow fieldset span {display:block;}
+div.formrow fieldset span label {float:none;display:inline;}
+div.formrow fieldset legend {font-weight:bold;}
+div.requiredRow {border:2px solid #049;}
+
+.button.blue {
+  color: #236277;
+  text-shadow: 0 1px #c2ecf9;
+  background: #61cdf3;
+  border-color: #6fbad1 #3fa3c0 #3583ab;
+  background-image: -webkit-linear-gradient(top, #9be5fa, #61cdf3 70%, #5fbde8);
+  background-image: -moz-linear-gradient(top, #9be5fa, #61cdf3 70%, #5fbde8);
+  background-image: -o-linear-gradient(top, #9be5fa, #61cdf3 70%, #5fbde8);
+  background-image: linear-gradient(to bottom, #9be5fa, #61cdf3 70%, #5fbde8);
+  -webkit-box-shadow: inset 0 1px #c5f0fd, inset 0 0 0 1px #8ad1eb, 0 1px #3583ab, 0 3px #3f9db8, 0 4px #3583ab, 0 5px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 1px #c5f0fd, inset 0 0 0 1px #8ad1eb, 0 1px #3583ab, 0 3px #3f9db8, 0 4px #3583ab, 0 5px 2px rgba(0, 0, 0, 0.4);
+}
+</Style>		
+   		
+	
+	</head>
+	
+	<body background="/images/blue_background.jpeg" >		
+				
+		<main>
+			<div class="innertube">				
+				<h1 style="font-family: sans-serif; line-height: 24px; text-align: center; ">Add New Event Page</h1>
+				<h2 ccid="2465">Enter the Event details below</h2>
+<form action="AddNewEvent" method="post" name="NewEvent">
+<div class="formrow requiredRow">
+	<label for="txt_EventName" id="EventName-ariaLabel">Event Name</label>
+	<input id="txt_EventName" name="txt_EventName" type="text" aria-labelledby="EventName-ariaLabel" class="required" title="Event Name. This is a required field">
+</div>
+<div class="formrow requiredRow">
+	<label for="txt_EventDescription" id="EventDescription-ariaLabel">Event Description</label>
+	<input id="txt_EventDescription" name="txt_EventDescription" type="text" aria-labelledby="EventDescription-ariaLabel" class="required" title="Event Description. This is a required field">
+</div>
+<div class="formrow requiredRow">
+	<label for="sel_EventLocation" id="EventLocation-ariaLabel">Event Location</label>
+	<select id="sel_EventLocation" name="sel_EventLocation" aria-labelledby="EventLocation-ariaLabel" class="required" title="Event Location. This is a required field">
+		<option value="Herman Hall">Herman Hall</option>
+		<option value="MTCC Auditorium">MTCC Auditorium</option>
+	</select>
+</div>
+<div class="formrow requiredRow">
+	<label for="EventDate" id="EventDate-ariaLabel">Event Date</label>
+	<input id="EventDate" name="EventDate" type="datetime-local" aria-labelledby="EventDate-ariaLabel" class="required" title="Event Location. This is a required field">
+</div>
+<div class="row">
+<input type="submit" value="NewEvent">
+		</main>
+		<nav id="nav">
+			<div class="innertube">
+			<h3>Actions</h3>
+			<ul>
+				<li><a href="html/Header.html">Create New Event</a></li>
+				<li><a href="#">View Events</a></li>
+				<li><a href="html/Remove_Venue.html">View Attendees</a></li>
+				<li><a href="#">View Venues</a></li>				
+			</ul>			
+			</div>
+		</nav>
+	
+	</body>
+</html>

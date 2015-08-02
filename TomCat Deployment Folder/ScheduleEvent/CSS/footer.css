@@ -1,0 +1,10 @@
+<style>
+body {font-size:14px; font-family:Helvetica, Arial, Verdana, sans-serif; color:#f1f0f0; background:#272322 url(../images/footer_bg.jpg) 50% top repeat-x}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:top;
+    padding:5px; 
+}
+</style>
